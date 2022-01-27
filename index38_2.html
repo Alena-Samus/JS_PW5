@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index 38_1</title>
+</head>
+<body>
+  <script>
+//стрелочная функция для вычисления дискриминанта
+let calcD = (a, b , c) => {
+      return ((b * b) - (4 * a * c))
+};
+
+//функция для получения данных
+function getDate(x) {
+  let factor = prompt('Введите значение переменной ' + x + ':\nДлина введенного числа не должна превышать 153 символа');
+  return factor;  
+}
+
+//функция для валидации данных
+function  validationDate(valid) {
+  if (isNaN(+valid) || valid.replace(/\s+/g,'') == '' || valid.length > 153){
+  alert('Введенные данные не являются числом либо число слишком длинное!\nПопробуйте еще раз!')
+  return 0}
+  else return 1;
+}
+
+let a = getDate('a');
+while (validationDate(a) == 0) {
+  a = getDate('a');
+}
+
+
+let b = getDate('b');
+while (validationDate(b) == 0) {
+  b = getDate('b');
+}
+
+
+
+let c = getDate('c');
+while (validationDate(c) == 0) {
+  c = getDate('c');
+}
+
+
+//Вывод результата вычисления
+alert ('D = ' + calcD(a, b, c));
+  </script>
+</body>
+</html>
