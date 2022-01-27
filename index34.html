@@ -9,13 +9,17 @@
 <body>
   <script>
     function count(params) {
+      //Объявление переменных i и j в блоке if
       for (let i = 0; i < 3; i++){
         let j = i * 2;
       }
+
+      //При выполнении выдаст ошибку, т.к. i и j недоступны вне блока if
       alert ('i = ' +i);
       alert ('j = ' +j);
     }
-    count();
+
+    count();//Вызов функции
   </script>
   
 </body>
